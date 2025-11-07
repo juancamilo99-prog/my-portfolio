@@ -1,0 +1,446 @@
+:root{
+    --font-p: "Fugaz One", sans-serif;
+    --font-title: "Londrina Shadow", sans-serif;
+    --gradient-web: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%, #0a89a8, #40c9ff) border-box;
+    --background-web: aliceblue;
+}
+.about_me{
+    width: 250cap;
+    height: 60cap;
+    padding: 100px 150px 50px 150px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+.write_about1{
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    display: grid;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:start;
+    height: 100%;
+    width: 100%;
+}
+
+.project_cod2{
+    background-color: aqua;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 90%;
+    width:90%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 400ms;
+    padding: 0em;
+    margin-left: 0em;
+}
+
+.award2{
+    background-color:bisque;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 400ms;
+    padding: 0em;
+    margin-left: 0em;
+}
+
+.logotype{
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    height: 500px;
+}
+
+.logo-main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 5em;
+}
+
+p {
+    color: var(--background-web);
+}
+
+.project_cod2:hover, .award2:hover{
+    transform: scale(1.1,1.1);
+}
+
+.btn_group{
+    display:flex;
+    width: 100%;
+}
+
+.about-main{
+    font-family: var(--font-p);
+    font-size: 15px;
+    font-style: normal;
+}
+
+.title{
+    font-size: 45px;
+    font-style: normal;
+    color: aliceblue;
+    margin-left: 10px;
+}
+
+button{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10em;
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+
+}
+
+button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+/* CSS seccion portafolio*/
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 4em;
+    width: 100%;
+}
+
+.title-folio{
+    color: aliceblue;
+    padding: 2em;
+    margin-left: 80px;
+}
+
+
+.card{
+    width: 330px;
+    height: 300px;
+    padding: 20px;
+    color:aliceblue;
+    background: var(--gradient-web);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transform-origin: top bottom;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card .main-content{
+    flex: 1;
+}
+
+.card .header-main span:first-child {
+    font-weight: 600;
+    columns: #717171;
+    margin-right: 4px;
+}
+
+.card .heading{
+    font-size: 24px;
+    margin: 24px 0 16px;
+    font-weight: 600;
+}
+
+.card .categories{
+    display: flex;
+    gap: 10px;
+}
+
+.card .categories span{
+    background-color: #0a89a8;
+    padding: 4px 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50em;
+}
+
+.card .footer-main{
+    font-weight: 600;
+    color: #717171;
+    margin-right: 4px;
+}
+
+.card:hover{
+    rotate: -6deg;
+}
+
+/* CSS skills*/
+
+.cardd::before{
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    top: 20%;
+}
+
+.cardd::before,
+.cardd::after {
+    content: "";
+    background-color: #7090fa4b;
+    position: absolute;
+    filter: blur(10px);
+}
+
+.cards-skill{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 50px 0 50px 0;
+}
+
+.cards-skill{
+    display:grid;
+    gap:5px;
+}
+
+.cards-skill .skill1,
+.cards-skill .skill2,
+.cards-skill .skill3 {
+    width: 200px;
+    height: 180px;
+    font-family: "CustomFont", Arial, Helvetica, sans-serif;
+    backdrop-filter: blur(30px);
+    background-color: rgb(65,65,65, 0.11);
+    border: 1px solid rgb(144, 161, 255, 0.171);
+}
+
+.cards-skill .cardd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.cards-skill .cardd .img_h{
+    width: 60%;
+}
+
+.cards-skill .cardd:hover{
+    transform: scale(1.1,1.1);
+}
+
+.cards-skill:hover > .cardd:not(:hover){
+    filter: blur(5px);
+    transform: scale(0.9, 0.9);
+}
+
+/* CSS form*/
+
+.parent-form{
+    display:-webkit-flex;
+    gap: 8px;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.form-container{
+    width: 500px;
+    background: var(--gradient-web);
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+}
+
+.form-container .form-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label{
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+}
+.form-container .form-group input{
+    width: 100%;
+    padding: 12px 5px;
+    border-radius: 8px;
+    color: #ffff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 5px;
+    border-radius: 8px;
+    resize: none;
+    color: #ffff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder{
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus{
+    outline: none;
+    border-color: var(--gradient-web);
+}
+
+.form-container .form-group textarea:focus{
+    outline: none;
+    border-color: var(--gradient-web);
+}
+
+.redes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    position:relative;
+    display: grid;
+}
+
+.redes .glass {
+   grid-row-start: 2;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgb(0, 0, 0, 0.25);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+}
+
+.redes:hover .glass{
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+.redes .position-grid::before{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.redes .glass::before {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgb(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff
+}
+
+.redes .glass img{
+    width: 60px;
+}
+
+.position-grid{
+    grid-column: span 3 / span 3;
+    justify-content: center;
+    align-items: baseline;
+    display: flex;
+}
+
+.title-redes{
+    font-family: "Rubik Bubbles", system-ui;
+    color: var(--background-web);
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.msng {
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    font-family: var(--font-title);
+    color: var(--background-web);
+    font-size: 50px;
+}
+
+.footer{
+    padding: 50px 50px 20px;
+    justify-content: center;
+}
+
+.footer-msng{
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: var(--background-web);
+}
