@@ -2,40 +2,68 @@
     --font-p: "Fugaz One", sans-serif;
     --font-title: "Londrina Shadow", sans-serif;
     --gradient-web: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%, #0a89a8, #40c9ff) border-box;
-    --background-web: aliceblue;
+    --background-web: #df5a5d;
+    --background-title: #9898da
 }
+
 .about_me{
-    width: 250cap;
-    height: 60cap;
-    padding: 100px 150px 50px 150px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    align-items:center;
+    justify-items: center;
+    padding: 30px;
+    gap: 15px;
 }
-.write_about1{
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
+.write_about{
     display: grid;
-    align-items: center;
-    justify-content:center;
-    flex-direction:column;
-    text-align:start;
-    height: 100%;
-    width: 100%;
+    justify-items: center;
+    grid-column: span 1 / span 1;
+}
+
+.divisor{
+    background-color: white;
+    height: 2px;
+    width: 50%;
+}
+
+.ms_welcome{
+    width: 50%;
+    padding: 20px;
+    text-align:justify;
+    color: var(--background-web);
+}
+
+.logotype{
+    display: grid;
+    grid-row: span 2 / span 2 ;
+}
+
+.logotype > img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    clip-path: circle(50%);
+}
+
+.tarjet_pc {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 50px;
+   padding: 20px;
+   justify-content: center;
 }
 
 .project_cod2{
     background-color: aqua;
-    grid-column-start: 1;
-    grid-row-start: 3;
     display: flex;
     align-items:center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    height: 90%;
-    width:90%;
+    height: 120px;
+    width:400px;
     border-radius: 10px;
     cursor: pointer;
     transition: 400ms;
@@ -46,41 +74,19 @@
 .award2{
     background-color:bisque;
     grid-column-start: 2;
-    grid-row-start: 3;
+    grid-row-start: 2;
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    height: 90%;
-    width: 90%;
+    height: 120px;
+    width: 400px;
     border-radius: 10px;
     cursor: pointer;
     transition: 400ms;
     padding: 0em;
     margin-left: 0em;
-}
-
-.logotype{
-    grid-row: span 3 / span 3;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    height: 500px;
-}
-
-.logo-main{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 5em;
-}
-
-p {
-    color: var(--background-web);
 }
 
 .project_cod2:hover, .award2:hover{
@@ -89,20 +95,41 @@ p {
 
 .btn_group{
     display:flex;
-    width: 100%;
+    float:right;
+    width: 250px;
+    height: 100px;
 }
 
 .about-main{
     font-family: var(--font-p);
-    font-size: 15px;
+    font-size: 20px;
     font-style: normal;
+    padding: 10px;
 }
 
-.title{
+.typing-title{
     font-size: 45px;
     font-style: normal;
-    color: aliceblue;
-    margin-left: 10px;
+    text-align: center;
+    padding: 20px;
+    color: var(--background-title);
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+}
+
+@keyframes blink {
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 button{
@@ -128,42 +155,28 @@ button:hover {
 /* CSS seccion portafolio*/
 
 .parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-left: 4em;
-    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    gap: 15px;
+    padding: 15px;
 }
-
-.title-folio{
-    color: aliceblue;
-    padding: 2em;
-    margin-left: 80px;
-}
-
 
 .card{
-    width: 330px;
+    width: 300px;
     height: 300px;
     padding: 20px;
-    color:aliceblue;
+    color:var(--background-title);
     background: var(--gradient-web);
     border: 2px solid transparent;
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     cursor: pointer;
     transform-origin: top bottom;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.card .main-content{
-    flex: 1;
-}
+
 
 .card .header-main span:first-child {
     font-weight: 600;
@@ -221,16 +234,12 @@ button:hover {
 .cards-skill{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     align-items: center;
     justify-items: center;
-    padding: 50px 0 50px 0;
+    padding: 10px;
 }
 
-.cards-skill{
-    display:grid;
-    gap:5px;
-}
 
 .cards-skill .skill1,
 .cards-skill .skill2,
@@ -263,17 +272,16 @@ button:hover {
 }
 
 .cards-skill:hover > .cardd:not(:hover){
-    filter: blur(5px);
+    filter: saturate(0%);
     transform: scale(0.9, 0.9);
 }
 
 /* CSS form*/
 
 .parent-form{
-    display:-webkit-flex;
-    gap: 8px;
-    justify-content:space-around;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px
 }
 
 .form-container{
@@ -348,56 +356,6 @@ button:hover {
     border-color: var(--gradient-web);
 }
 
-.redes {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2,1fr);
-    position:relative;
-    display: grid;
-}
-
-.redes .glass {
-   grid-row-start: 2;
-    width: 180px;
-    height: 200px;
-    background: linear-gradient(#fff2, transparent);
-    border: 1px solid rgb(255, 255, 255, 0.1);
-    box-shadow: 0 25px 25px rgb(0, 0, 0, 0.25);
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    border-radius: 10px;
-    margin: 0 -45px;
-    backdrop-filter: blur(10px);
-    transform: rotate(calc(var(--r) * 1deg));
-}
-
-.redes:hover .glass{
-    transform: rotate(0deg);
-    margin: 0 10px;
-}
-.redes .position-grid::before{
-    position: absolute;
-    bottom: 0;
-    display: flex;
-}
-
-.redes .glass::before {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    background: rgb(255, 255, 255, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffff
-}
-
-.redes .glass img{
-    width: 60px;
-}
-
 .position-grid{
     grid-column: span 3 / span 3;
     justify-content: center;
@@ -408,6 +366,16 @@ button:hover {
 .title-redes{
     font-family: "Rubik Bubbles", system-ui;
     color: var(--background-web);
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes > img {
+    width: 30px;
 }
 
 
@@ -427,11 +395,11 @@ button:hover {
 
 .msng {
     display: flex;
-    justify-content:space-around;
-    position: relative;
+    justify-content: center;
     font-family: var(--font-title);
     color: var(--background-web);
     font-size: 50px;
+    padding: 30px;
 }
 
 .footer{
@@ -443,4 +411,58 @@ button:hover {
     text-align: center;
     padding: 20px 0 0 0;
     color: var(--background-web);
+}
+
+/*RESPONSIVE MEDIAS-QUERIES*/
+@media (max-width: 640px) {
+    .about_me {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .cards-skill{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 10px;
+    }
+
+    .tarjet_pc{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav_home {
+        display: none;
+        visibility: hidden;
+    }
+
+     .title-folio{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .parent{
+        display: flex;
+        justify-content: center;
+    }
+
+    .ms_welcome{
+        width: 70%;
+        font-size: 100%;
+    }
+
+
+}
+
+@media screen and (min-width:640px) and (max-width: 1410px) {
+    .cards-skill{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .parent{
+        display: flex;
+        justify-content: center;
+    }
 }
