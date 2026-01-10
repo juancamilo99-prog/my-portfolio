@@ -10,7 +10,7 @@
 }
 
 .header{
-    background-color: aliceblue;
+    background-color: #F5F7FA; 
     display:flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -35,7 +35,7 @@
     font-size:20px;
     font-family: var(--font-feature-nav);
     color: var(--primary-color-font);
-    font-style: normal;
+    font-style:oblique;
 }
 
 
