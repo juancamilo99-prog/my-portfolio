@@ -181,6 +181,8 @@
     transition: 400ms;
     gap: 10px;
     box-shadow: 0 5px 5px rgb(133, 133, 133);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .award2{
@@ -198,6 +200,8 @@
     transition: 400ms;
     gap: 10px;
     box-shadow: 0 5px 5px rgb(133, 133, 133);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .project_cod2:hover, .award2:hover{
