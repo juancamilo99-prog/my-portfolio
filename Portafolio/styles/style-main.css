@@ -833,6 +833,10 @@ button:hover {
         max-width: 800px;
         gap: 15px;
     }
+
+    #portfolio, #habilidades, #sobre_mi{
+    scroll-margin-top: 350px;
+}
 }
 
 @media (min-width: 1025px) and (max-width: 1500px){
