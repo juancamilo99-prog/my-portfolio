@@ -535,7 +535,8 @@ button:hover {
 .footer-msng{
     text-align: center;
     padding: 20px 0 0 0;
-    color: var(--background-web);
+    font-weight: 600;
+    font-size: 18px;
 }
 
 /*STYLE SCROLL*/
