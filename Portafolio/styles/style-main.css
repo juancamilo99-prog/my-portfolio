@@ -8,6 +8,10 @@
     --font-space-name: "Caveat Brush", cursive;
 }
 /*SECCION INICIO*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .inicio{
     display: grid;
     min-height: 100vh;
@@ -321,7 +325,9 @@ button:hover {
 
 .card .categories{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    padding: 10px 0;
 }
 
 .card .categories span{
@@ -336,6 +342,7 @@ button:hover {
 .card .footer-main{
     font-weight: 600;
     color: #717171;
+    padding: 10px 0 0;
     margin-right: 4px;
 }
 
